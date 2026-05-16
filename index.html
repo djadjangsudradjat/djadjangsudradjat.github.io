@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H. Djadjang Sudradjat | Professional CV | Aerospace Engineer</title>
+  <meta
+    name="description"
+    content="Professional CV website for a senior Aerospace Engineer, retired from PT Dirgantara Indonesia."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2f;
+      --panel: rgba(255,255,255,0.06);
+      --panel-strong: rgba(255,255,255,0.1);
+      --text: #ecf3ff;
+      --muted: #aab8cf;
+      --gold: #d6b36a;
+      --gold-soft: #f0dfb3;
+      --line: rgba(214,179,106,0.25);
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(214,179,106,0.14), transparent 28%),
+        radial-gradient(circle at top left, rgba(89,121,168,0.18), transparent 24%),
+        linear-gradient(180deg, #050c17 0%, #08111d 45%, #091426 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 13, 24, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand small {
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .brand strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff7e6;
+    }
+
+    .menu-wrap {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--muted);
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: var(--gold-soft);
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+    }
+
+    .lang-btn {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: #eef4ff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, #d6b36a, #f0dfb3);
+      color: #111827;
+      border-color: transparent;
+    }
+
+    .hero {
+      padding: 90px 0 50px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 0.95;
+      margin-bottom: 18px;
+      color: #fff8eb;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .lead {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 26px;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(214,179,106,0.18), transparent 65%);
+      border-radius: 50%;
+    }
+
+    .profile-photo {
+      aspect-ratio: 4 / 5;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(214,179,106,0.22), rgba(255,255,255,0.04)),
+        url('H_Djadjang_Sudradjat.jpg?auto=format&fit=crop&w=900&q=80') center/cover;
+      border: 1px solid rgba(255,255,255,0.1);
+      min-height: 440px;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .info-box {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .info-box span {
+      display: block;
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+
+    .info-box strong {
+      font-size: 15px;
+      color: #f8fbff;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #d6b36a, #f0dfb3);
+      color: #111827;
+      box-shadow: 0 10px 30px rgba(214,179,106,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(214,179,106,0.35);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.03);
+      color: #eef4ff;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold-soft);
+    }
+
+    section {
+      padding: 42px 0;
+    }
+
+    .section-title {
+      margin-bottom: 24px;
+    }
+
+    .section-title .mini {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 11px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .section-title h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      color: #fff8ea;
+      line-height: 1.05;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 720px;
+      margin-top: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: #fff6e7;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .highlight-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .highlight-list li {
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .highlight-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+    }
+
+    .timeline-item .year {
+      display: inline-block;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item h4 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #fff8ec;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .skill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(214,179,106,0.12);
+      border: 1px solid rgba(214,179,106,0.2);
+      color: #f8e7bf;
+      font-size: 14px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .project-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .project-content {
+      padding: 22px;
+    }
+
+    .project-content span {
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .project-content h3 {
+      margin: 10px 0 10px;
+      color: #fff7e8;
+      font-size: 22px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 220px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: var(--panel);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 14px;
+      background: linear-gradient(180deg, transparent, rgba(3,8,15,0.88));
+      color: #fff7e8;
+      font-size: 14px;
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .doc-card {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .doc-card small {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .doc-card h4 {
+      margin: 10px 0;
+      color: #fff8ec;
+      font-size: 19px;
+    }
+
+    .doc-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-list li {
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      color: var(--muted);
+    }
+
+    .quote-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 32px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(214,179,106,0.12), rgba(255,255,255,0.05));
+      border: 1px solid rgba(214,179,106,0.18);
+    }
+
+    .quote-box blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      line-height: 1.15;
+      color: #fff7e5;
+    }
+
+    footer {
+      padding: 36px 0 56px;
+      color: #91a1bb;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(214,179,106,0.35), transparent);
+      margin: 18px 0 0;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-wrap,
+      .grid-2,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .docs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .menu {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .quick-info,
+      .project-grid,
+      .gallery-grid,
+      .docs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 18px;
+      }
+
+      .profile-photo {
+        min-height: 340px;
+      }
+
+      .quote-box blockquote {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .lang-switch {
+        width: 100%;
+      }
+
+      .lang-btn {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <small data-en="Curriculum Vitae" data-id="Curriculum Vitae">Curriculum Vitae</small>
+        <strong>H. Djadjang Sudradjat</strong>
+      </div>
+
+      <div class="menu-wrap">
+        <nav class="menu">
+          <a href="#tentang" data-en="About" data-id="Tentang">About</a>
+          <a href="#pengalaman" data-en="Experience" data-id="Pengalaman">Experience</a>
+          <a href="#portofolio" data-en="Portfolio" data-id="Portofolio">Portfolio</a>
+          <a href="#galeri" data-en="Gallery" data-id="Galeri">Gallery</a>
+          <a href="#dokumen" data-en="Documents" data-id="Dokumen">Documents</a>
+          <a href="#kontak" data-en="Contact" data-id="Kontak">Contact</a>
+        </nav>
+
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">English</button>
+          <button class="lang-btn" data-lang="id" onclick="setLanguage('id')">Indonesia</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <span
+            class="eyebrow"
+            data-en="Aircraft Electrical • Avionics • Senior Professional"
+            data-id="Aircraft Electrical • Avionics • Profesional Senior"
+          >Aircraft Electrical • Avionics • Senior Professional</span>
+
+          <h1>
+            <span data-en="Professional Aerospace CV" data-id="Profesional Dirgantara">Professional Aerospace CV</span>
+          </h1>
+
+          <p
+            class="lead"
+            data-en="A senior professional in aircraft electrical and avionics support, retired from PT Dirgantara Indonesia, with more than 28 years of experience in electrical installation, functional testing, troubleshooting, harness installation, mock-up development, and aircraft maintenance across various aircraft programs and technical assignments both domestically and internationally."
+            data-id="Seorang profesional senior di bidang aircraft electrical dan avionics support, pensiunan PT Dirgantara Indonesia, dengan pengalaman lebih dari 28 tahun dalam electrical installation, functional test, troubleshooting, harness installation, mock-up development, serta maintenance aircraft pada berbagai program pesawat dan penugasan teknis di dalam maupun luar negeri."
+          >
+            A senior professional in aircraft electrical and avionics support, retired from PT Dirgantara Indonesia, with more than 28 years of experience in electrical installation, functional testing, troubleshooting, harness installation, mock-up development, and aircraft maintenance across various aircraft programs and technical assignments both domestically and internationally.
+          </p>
+
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              href="https://api.whatsapp.com/send?phone=6285864151579&text=Hello%20Mr.%20H.%20Djadjang%20Sudradjat"
+              target="_blank"
+              data-en="Contact Me"
+              data-id="Hubungi Saya"
+            >Contact Me</a>
+
+            <a
+              class="btn btn-secondary"
+              href="#portofolio"
+              data-en="View Portfolio"
+              data-id="Lihat Portofolio"
+            >View Portfolio</a>
+          </div>
+
+          <div class="quick-info">
+            <div class="info-box">
+              <span data-en="Birth" data-id="Kelahiran">Birth</span>
+              <strong data-en="Bandung, January 1, 1957" data-id="Bandung, 1 Januari 1957">Bandung, January 1, 1957</strong>
+            </div>
+            <div class="info-box">
+              <span data-en="Institution" data-id="Instansi">Institution</span>
+              <strong>PT Dirgantara Indonesia</strong>
+            </div>
+            <div class="info-box">
+              <span data-en="Specialization" data-id="Spesialisasi">Specialization</span>
+              <strong>Aircraft Electrical & Avionics</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="profile-photo"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="container">
+        <div class="section-title">
+          <span class="mini" data-en="About Me" data-id="Tentang Saya">About Me</span>
+          <h2 data-en="Professional Profile" data-id="Profil Profesional">Professional Profile</h2>
+          <p
+            data-en="An aerospace technical professional with extensive experience in aircraft electrical installation, avionics support, functional testing, troubleshooting, harness installation, mock-up development, and aircraft maintenance. This page summarizes career history, project experience, technical documentation, and digital archives of certificates and licenses."
+            data-id="Profesional teknis di bidang kedirgantaraan dengan pengalaman panjang dalam aircraft electrical installation, avionics support, functional test, troubleshooting, harness installation, mock-up development, dan maintenance aircraft. Halaman ini merangkum perjalanan karier, pengalaman proyek, dokumentasi kegiatan teknis, serta arsip sertifikat dan lisensi dalam format digital."
+          >
+            An aerospace technical professional with extensive experience in aircraft electrical installation, avionics support, functional testing, troubleshooting, harness installation, mock-up development, and aircraft maintenance. This page summarizes career history, project experience, technical documentation, and digital archives of certificates and licenses.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 data-en="Executive Summary" data-id="Ringkasan Eksekutif">Executive Summary</h3>
+            <p
+              data-en="H. Djadjang Sudradjat is an aerospace technical professional with extensive experience in aircraft electrical installation, avionics support, testing, troubleshooting, harness installation, mock-up development, and aircraft maintenance. His primary career was built at PT Dirgantara Indonesia for more than 28 years, with involvement in aircraft programs such as NC-212, CN-235, N-250, N-230, and multiple technical assignments both in Indonesia and abroad."
+              data-id="H. Djadjang Sudradjat adalah profesional teknis di bidang kedirgantaraan dengan pengalaman panjang dalam aircraft electrical installation, avionics support, testing, troubleshooting, harness installation, mock-up development, dan maintenance aircraft. Karier utamanya dijalani di PT Dirgantara Indonesia selama lebih dari 28 tahun melalui keterlibatan pada berbagai program pesawat seperti NC-212, CN-235, N-250, N-230, serta sejumlah penugasan teknis di dalam dan luar negeri."
+            >
+              H. Djadjang Sudradjat is an aerospace technical professional with extensive experience in aircraft electrical installation, avionics support, testing, troubleshooting, harness installation, mock-up development, and aircraft maintenance. His primary career was built at PT Dirgantara Indonesia for more than 28 years, with involvement in aircraft programs such as NC-212, CN-235, N-250, N-230, and multiple technical assignments both in Indonesia and abroad.
+            </p>
+            <ul class="highlight-list">
+              <li
+                data-en="More than 28 years of experience in the aerospace industry and aircraft electrical systems."
+                data-id="Berpengalaman lebih dari 28 tahun di industri dirgantara dan sistem kelistrikan pesawat."
+              >More than 28 years of experience in the aerospace industry and aircraft electrical systems.</li>
+              <li
+                data-en="Experienced in installation, functional testing, troubleshooting, and integration of aircraft electrical & avionics systems."
+                data-id="Terlibat dalam instalasi, pengujian fungsi, troubleshooting, dan integrasi sistem aircraft electrical & avionics."
+              >Experienced in installation, functional testing, troubleshooting, and integration of aircraft electrical & avionics systems.</li>
+              <li
+                data-en="Has worked across domestic and international projects, including Singapore, South Korea, Italy, Malaysia, and Burkina Faso."
+                data-id="Memiliki pengalaman lintas proyek nasional dan internasional, termasuk Singapura, Korea Selatan, Italia, Malaysia, dan Burkina Faso."
+              >Has worked across domestic and international projects, including Singapore, South Korea, Italy, Malaysia, and Burkina Faso.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 data-en="Core Expertise" data-id="Keahlian Utama">Core Expertise</h3>
+            <p
+              data-en="Technical specialization based on professional experience and an educational background in aerospace electronics."
+              data-id="Spesialisasi teknis berdasarkan pengalaman kerja dan latar pendidikan elektronika kedirgantaraan."
+            >
+              Technical specialization based on professional experience and an educational background in aerospace electronics.
+            </p>
+            <div class="skills">
+              <span class="skill">Aircraft Electrical Installation</span>
+              <span class="skill">Avionics Support</span>
+              <span class="skill">Harness Installation</span>
+              <span class="skill">Aircraft Testing</span>
+              <span class="skill">Functional Test</span>
+              <span class="skill">Troubleshooting</span>
+              <span class="skill">Aircraft Maintenance</span>
+              <span class="skill">Mock-Up Development</span>
+              <span class="skill">Electrical Integration</span>
+              <span class="skill">Technical Documentation</span>
+              <span class="skill">Engineering Workshop Support</span>
+              <span class="skill">International Technical Assignment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pendidikan">
+      <div class="container">
+        <div class="section-title">
+          <span class="mini" data-en="Education & Certification" data-id="Pendidikan & Sertifikasi">Education & Certification</span>
+          <h2 data-en="Academic Foundation and Competence" data-id="Pondasi Akademik dan Kompetensi">Academic Foundation and Competence</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 data-en="Educational Background" data-id="Riwayat Pendidikan">Educational Background</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="year" data-en="January 2, 1965 – December 19, 1970" data-id="2 Januari 1965 – 19 Desember 1970">January 2, 1965 – December 19, 1970</span>
+                <h4 data-en="Raya Barat Public Elementary School" data-id="Sekolah Dasar Negeri Raya Barat">Raya Barat Public Elementary School</h4>
+                <p
+                  data-en="Built an early academic foundation with emphasis on discipline, persistence, and systematic thinking as the basis for developing technical competence."
+                  data-id="Membangun fondasi akademik awal dengan penekanan pada kedisiplinan, ketekunan, dan kemampuan berpikir sistematis sebagai dasar pengembangan kompetensi teknis."
+                >
+                  Built an early academic foundation with emphasis on discipline, persistence, and systematic thinking as the basis for developing technical competence.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="year" data-en="January 2, 1971 – December 1, 1973" data-id="2 Januari 1971 – 1 Desember 1973">January 2, 1971 – December 1, 1973</span>
+                <h4 data-en="Junior High School VII" data-id="Sekolah Menengah Pertama VII">Junior High School VII</h4>
+                <p
+                  data-en="Demonstrated strong interest in science and mathematics while strengthening analytical abilities relevant to engineering and applied technology."
+                  data-id="Menunjukkan ketertarikan yang kuat pada sains dan matematika, serta mengasah kemampuan analitis yang relevan dengan bidang rekayasa dan teknologi terapan."
+                >
+                  Demonstrated strong interest in science and mathematics while strengthening analytical abilities relevant to engineering and applied technology.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="year" data-en="January 2, 1974 – December 11, 1976" data-id="2 Januari 1974 – 11 Desember 1976">January 2, 1974 – December 11, 1976</span>
+                <h4 data-en="Aerospace Electronics Technical High School" data-id="Sekolah Tinggi Menengah Elektronika Angkasa">Aerospace Electronics Technical High School</h4>
+                <p
+                  data-en="Completed technical secondary education focused on electronics and aerospace systems, building a foundation in avionics understanding, technical precision, troubleshooting, and an engineering approach oriented toward safety, efficiency, and innovation."
+                  data-id="Menempuh pendidikan menengah teknis dengan fokus pada elektronika dan sistem kedirgantaraan. Membentuk dasar keahlian dalam pemahaman sistem avionik, presisi teknis, troubleshooting, dan pendekatan engineering yang berorientasi pada keselamatan, efisiensi, dan inovasi."
+                >
+                  Completed technical secondary education focused on electronics and aerospace systems, building a foundation in avionics understanding, technical precision, troubleshooting, and an engineering approach oriented toward safety, efficiency, and innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 data-en="Certificates & Licenses" data-id="Sertifikat & Lisensi">Certificates & Licenses</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="year" data-en="JPG Documents" data-id="Dokumen JPG">JPG Documents</span>
+                <h4 data-en="Competency Certificates" data-id="Sertifikat Kompetensi">Competency Certificates</h4>
+                <p data-en="JPG scans of training certificates, awards, or professional licenses." data-id="Scan JPG sertifikat pelatihan, penghargaan, atau lisensi profesional.">
+                  JPG scans of training certificates, awards, or professional licenses.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <span class="year" data-en="Digital Archive" data-id="Arsip Digital">Digital Archive</span>
+                <h4 data-en="Supporting Documents" data-id="Dokumen Pendukung">Supporting Documents</h4>
+                <p data-en="Includes diplomas, licenses, letters of appreciation, official visit documentation, and proof of experience." data-id="Memuat ijazah, lisensi, surat penghargaan, dokumentasi kunjungan resmi, dan bukti pengalaman.">
+                  Includes diplomas, licenses, letters of appreciation, official visit documentation, and proof of experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pengalaman">
+      <div class="container">
+        <div class="section-title">
+          <span class="mini" data-en="Professional Experience" data-id="Pengalaman Profesional">Professional Experience</span>
+          <h2>PT Dirgantara Indonesia</h2>
+          <p
+            data-en="An experienced professional in aircraft electrical systems, avionics, installation, testing, troubleshooting, mock-up development, and maintenance, with a track record of more than 28 years across NC-212, CN-235, N-250, and related projects."
+            data-id="Profesional berpengalaman di bidang aircraft electrical, avionics, installation, testing, troubleshooting, mock-up development, dan maintenance dengan rekam jejak lebih dari 28 tahun pada program NC-212, CN-235, N-250, dan proyek terkait lainnya."
+          >
+            An experienced professional in aircraft electrical systems, avionics, installation, testing, troubleshooting, mock-up development, and maintenance, with a track record of more than 28 years across NC-212, CN-235, N-250, and related projects.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="year">1983 – 1986</span>
+            <h4 data-en="Aircraft Electrical Installation – NC-212 Program" data-id="Aircraft Electrical Installation – NC-212 Program">Aircraft Electrical Installation – NC-212 Program</h4>
+            <p
+              data-en="Served in the AEI Shop on aircraft electrical installation work for the NC-212 program in KP 1, covering assembly, installation, and support for aircraft electrical systems."
+              data-id="Bertugas pada AEI Shop untuk pekerjaan instalasi electrical aircraft pada program NC-212 di KP 1, mencakup perakitan, pemasangan, dan dukungan sistem kelistrikan pesawat."
+            >
+              Served in the AEI Shop on aircraft electrical installation work for the NC-212 program in KP 1, covering assembly, installation, and support for aircraft electrical systems.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="year">1986 – 1993</span>
+            <h4 data-en="Aircraft Electrical Installation – CN-235 Program" data-id="Aircraft Electrical Installation – CN-235 Program">Aircraft Electrical Installation – CN-235 Program</h4>
+            <p
+              data-en="Handled AEI Shop work on the CN-235 program in KP 2, focusing on installation, integration, and readiness of aircraft electrical systems."
+              data-id="Menangani pekerjaan AEI Shop pada program CN-235 di KP 2, dengan fokus pada instalasi, integrasi, dan kesiapan sistem electrical pesawat."
+            >
+              Handled AEI Shop work on the CN-235 program in KP 2, focusing on installation, integration, and readiness of aircraft electrical systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portofolio">
+      <div class="container">
+        <div class="section-title">
+          <span class="mini" data-en="Portfolio" data-id="Portofolio">Portfolio</span>
+          <h2 data-en="Featured Projects and Contributions" data-id="Proyek dan Kontribusi Unggulan">Featured Projects and Contributions</h2>
+          <p
+            data-en="This section presents selected work experience, technical assignments, and professional contributions in aircraft electrical installation, functional testing, troubleshooting, aircraft maintenance, and aerospace project support both domestically and internationally."
+            data-id="Bagian ini menampilkan sejumlah pengalaman kerja, penugasan teknis, serta kontribusi profesional dalam instalasi sistem kelistrikan pesawat, pengujian fungsi, troubleshooting, maintenance aircraft, dan dukungan proyek kedirgantaraan di dalam maupun luar negeri."
+          >
+            This section presents selected work experience, technical assignments, and professional contributions in aircraft electrical installation, functional testing, troubleshooting, aircraft maintenance, and aerospace project support both domestically and internationally.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-image" style="background-image:url('PT_Dirgantara_Indonesia.jpg?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-content">
+              <span data-en="Project 01" data-id="Proyek 01">Project 01</span>
+              <h3 data-en="Aircraft Engineering Support" data-id="Dukungan Engineering Pesawat">Aircraft Engineering Support</h3>
+              <p
+                data-en="Highlights roles in engineering support, technical review, documentation, and work coordination."
+                data-id="Menampilkan peran dalam proses engineering support, review teknis, dokumentasi, dan koordinasi pekerjaan."
+              >
+                Highlights roles in engineering support, technical review, documentation, and work coordination.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image" style="background-image:url('Hangar_Pesawat.jpg?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-content">
+              <span data-en="Project 02" data-id="Proyek 02">Project 02</span>
+              <h3 data-en="Hangar & Production Activities" data-id="Kegiatan di Hanggar & Produksi">Hangar & Production Activities</h3>
+              <p
+                data-en="Suitable for photos and descriptions of hangar work, production lines, inspection, or quality control activities."
+                data-id="Cocok untuk foto dan penjelasan aktivitas di hanggar, lini produksi, inspeksi, atau kontrol kualitas."
+              >
+                Suitable for photos and descriptions of hangar work, production lines, inspection, or quality control activities.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image" style="background-image:url('sirio_panel.jpg?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-content">
+              <span data-en="Project 03" data-id="Proyek 03">Project 03</span>
+              <h3 data-en="International Technical Visits" data-id="Kunjungan Teknis Luar Negeri">International Technical Visits</h3>
+              <p
+                data-en="Showcases professional travel activities, international collaboration, seminars, training, or industrial visits."
+                data-id="Menampilkan aktivitas perjalanan profesional, kolaborasi internasional, seminar, pelatihan, atau kunjungan industri."
+              >
+                Showcases professional travel activities, international collaboration, seminars, training, or industrial visits.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri">
+      <div class="container">
+        <div class="section-title">
+          <span class="mini" data-en="Photo Gallery" data-id="Galeri Foto">Photo Gallery</span>
+          <h2 data-en="Career and Technical Activity Documentation" data-id="Dokumentasi Karier dan Aktivitas Teknis">Career and Technical Activity Documentation</h2>
+          <p
+            data-en="A collection of visual documentation capturing professional milestones, technical activities, project assignments, and work visits in the international aerospace industry."
+            data-id="Kumpulan dokumentasi visual yang merekam perjalanan profesional, aktivitas teknis, penugasan proyek, serta kunjungan kerja di lingkungan industri kedirgantaraan luar negeri."
+          >
+            A collection of visual documentation capturing professional milestones, technical activities, project assignments, and work visits in the international aerospace industry.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="luar_negeri_1.jpg?auto=format&fit=crop&w=1200&q=80" alt="Professional profile photo" />
+            <div class="gallery-caption" data-en="Professional Overseas Profile Photo" data-id="Foto Profil Profesional Luar Negeri">Professional Overseas Profile Photo</div>
+          </div>
+          <div class="gallery-item">
+            <img src="luar_negeri_2.jpg?auto=format&fit=crop&w=1200&q=80" alt="Technical activity documentation in hangar" />
+            <div class="gallery-caption" data-en="Overseas Technical Activity Documentation" data-id="Dokumentasi Aktivitas Teknis Luar Negeri">Overseas Technical Activity Documentation</div>
+          </div>
+          <div class="gallery-item">
+            <img src="luar_negeri_3.jpg?auto=format&fit=crop&w=1200&q=80" alt="Overseas technical assignment activities" />
+            <div class="gallery-caption" data-en="Overseas Technical Assignments and Activities" data-id="Penugasan dan Kegiatan Teknis Luar Negeri">Overseas Technical Assignments and Activities</div>
+          </div>
+          <div class="gallery-item">
+            <img src="luar_negeri_4.jpg?auto=format&fit=crop&w=1200&q=80" alt="Project work documentation" />
+            <div class="gallery-caption" data-en="Project-Based Overseas Work Documentation" data-id="Dokumentasi Pekerjaan Berbasis Proyek Luar Negeri">Project-Based Overseas Work Documentation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dokumen">
+      <div class="container">
+        <div class="section-title">
+          <span class="mini" data-en="Documents" data-id="Dokumen">Documents</span>
+          <h2 data-en="Education Archives, Certificates, and Supporting Documents" data-id="Arsip Pendidikan, Sertifikat, dan Dokumen Pendukung">Education Archives, Certificates, and Supporting Documents</h2>
+          <p
+            data-en="This section contains digital archives related to educational background, training certificates, licenses, assignment letters, project documentation, and other supporting documents reflecting professional experience and competence in aircraft electrical systems, avionics, installation, testing, and aircraft maintenance."
+            data-id="Bagian ini memuat arsip digital yang berkaitan dengan riwayat pendidikan, sertifikat pelatihan, lisensi, surat tugas, dokumentasi proyek, serta dokumen pendukung lainnya yang merefleksikan pengalaman dan kompetensi profesional di bidang aircraft electrical, avionics, installation, testing, dan maintenance aircraft."
+          >
+            This section contains digital archives related to educational background, training certificates, licenses, assignment letters, project documentation, and other supporting documents reflecting professional experience and competence in aircraft electrical systems, avionics, installation, testing, and aircraft maintenance.
+          </p>
+        </div>
+
+        <div class="docs-grid">
+          <div class="doc-card">
+            <small data-en="Document 01" data-id="Dokumen 01">Document 01</small>
+            <h4 data-en="Diplomas and Educational Background" data-id="Ijazah dan Riwayat Pendidikan">Diplomas and Educational Background</h4>
+            <p
+              data-en="Contains formal education archives as the basis for technical competence, discipline, and work readiness in electronics and aerospace."
+              data-id="Memuat arsip pendidikan formal sebagai dasar pembentukan kompetensi teknis, kedisiplinan, dan kesiapan kerja di bidang elektronika serta kedirgantaraan."
+            >
+              Contains formal education archives as the basis for technical competence, discipline, and work readiness in electronics and aerospace.
+            </p>
+            <a class="btn btn-secondary" href="#" data-en="View Document" data-id="Lihat Dokumen">View Document</a>
+          </div>
+
+          <div class="doc-card">
+            <small data-en="Document 02" data-id="Dokumen 02">Document 02</small>
+            <h4 data-en="Certificates, Training, and Licenses" data-id="Sertifikat, Pelatihan, dan Lisensi">Certificates, Training, and Licenses</h4>
+            <p
+              data-en="Contains technical training certificates, licenses, awards, and competency documents supporting professional experience in installation, testing, and aircraft maintenance."
+              data-id="Berisi sertifikat pelatihan teknis, lisensi, penghargaan, dan dokumen kompetensi yang mendukung pengalaman profesional dalam instalasi, pengujian, dan maintenance aircraft."
+            >
+              Contains technical training certificates, licenses, awards, and competency documents supporting professional experience in installation, testing, and aircraft maintenance.
+            </p>
+            <a class="btn btn-secondary" href="#" data-en="View Document" data-id="Lihat Dokumen">View Document</a>
+          </div>
+
+          <div class="doc-card">
+            <small data-en="Document 03" data-id="Dokumen 03">Document 03</small>
+            <h4 data-en="Assignment and Work Experience Archives" data-id="Arsip Penugasan dan Pengalaman Kerja">Assignment and Work Experience Archives</h4>
+            <p
+              data-en="Includes assignment letters, project documentation, proof of technical assignments, and archives of professional activities in domestic and international work environments."
+              data-id="Mencakup surat tugas, dokumentasi proyek, bukti penugasan teknis, serta arsip kegiatan profesional di lingkungan kerja nasional maupun internasional."
+            >
+              Includes assignment letters, project documentation, proof of technical assignments, and archives of professional activities in domestic and international work environments.
+            </p>
+            <a class="btn btn-secondary" href="#" data-en="View Document" data-id="Lihat Dokumen">View Document</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak">
+      <div class="container">
+        <div class="section-title">
+          <span class="mini" data-en="Contact" data-id="Kontak">Contact</span>
+          <h2 data-en="Contact Me" data-id="Hubungi Saya">Contact Me</h2>
+          <p
+            data-en="For professional communication, documentation needs, or further information regarding work experience and technical assignment history, please contact me through the following information."
+            data-id="Untuk komunikasi profesional, kebutuhan dokumentasi, ataupun informasi lebih lanjut mengenai pengalaman kerja dan riwayat penugasan teknis, silakan menghubungi melalui informasi kontak berikut."
+          >
+            For professional communication, documentation needs, or further information regarding work experience and technical assignment history, please contact me through the following information.
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <div class="card">
+            <h3 data-en="Contact Information" data-id="Informasi Kontak">Contact Information</h3>
+            <p
+              data-en="The following contact information may be used for professional communication and correspondence related to profile, documents, and work experience."
+              data-id="Informasi kontak berikut dapat digunakan untuk keperluan komunikasi profesional dan korespondensi terkait profil, dokumen, maupun pengalaman kerja."
+            >
+              The following contact information may be used for professional communication and correspondence related to profile, documents, and work experience.
+            </p>
+            <ul class="contact-list">
+              <li><strong data-en="Name: " data-id="Nama : ">Name: </strong> H. Djadjang Sudradjat</li>
+              <li><strong data-en="Residence: " data-id="Domisili : ">Residence: </strong> Bandung City, West Java, Indonesia</li>
+              <li><strong>Email: </strong> djadjangsudradjat1957@email.com</li>
+              <li><strong data-en="Phone: " data-id="Telepon : ">Phone: </strong> +62 22 6044580</li>
+              <li>
+                <strong>WhatsApp: </strong>
+                <a href="https://api.whatsapp.com/send?phone=6285864151579&text=Hello%20Mr.%20H.%20Djadjang%20Sudradjat" target="_blank">+62 858 6415 1579</a>
+              </li>
+              <li>
+                <strong data-en="Specialization: " data-id="Spesialisasi : ">Specialization: </strong>
+                <span
+                  data-en="Aircraft Electrical, Avionics Support, Harness Installation, Functional Testing, Troubleshooting, and Aircraft Maintenance"
+                  data-id="Aircraft Electrical, Avionics Support, Harness Installation, Functional Test, Troubleshooting, dan Aircraft Maintenance"
+                >
+                  Aircraft Electrical, Avionics Support, Harness Installation, Functional Testing, Troubleshooting, and Aircraft Maintenance
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="quote-box">
+            <blockquote
+              data-en="“A lifetime of dedication in aerospace is a legacy of experience, precision, and commitment.”"
+              data-id="“Pengabdian panjang dalam dunia kedirgantaraan adalah warisan pengalaman, ketelitian, dan dedikasi.”"
+            >
+              “A lifetime of dedication in aerospace is a legacy of experience, precision, and commitment.”
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="divider"></div>
+      <p style="margin-top:18px;">
+        <span
+          data-en="© 2026 H. Djadjang Sudradjat • Aerospace Professional • Retired from PT Dirgantara Indonesia • Developed by "
+          data-id="© 2026 H. Djadjang Sudradjat • Profesional Dirgantara • Purnabakti PT Dirgantara Indonesia • Developed by "
+        >
+          © 2026 H. Djadjang Sudradjat • Aerospace Professional • Retired from PT Dirgantara Indonesia • Developed by
+        </span>
+        <a
+          href="https://api.whatsapp.com/send?phone=6287734148075&text=Hello%20Mr.%20Miftah%20Saifulloh"
+          target="_blank"
+        >Miftah Saifulloh, BSc</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "H. Djadjang Sudradjat | Professional CV | Aerospace Engineer",
+        description: "Professional CV website for a senior Aerospace Engineer, retired from PT Dirgantara Indonesia.",
+        whatsappMain: "https://api.whatsapp.com/send?phone=6285864151579&text=Hello%20Mr.%20H.%20Djadjang%20Sudradjat",
+        whatsappDev: "https://api.whatsapp.com/send?phone=6287734148075&text=Hello%20Mr.%20Miftah%20Saifulloh"
+      },
+      id: {
+        title: "H. Djadjang Sudradjat | CV Profesional | Aerospace Engineer",
+        description: "Website CV profesional untuk Aerospace Engineer senior, pensiunan PT Dirgantara Indonesia.",
+        whatsappMain: "https://api.whatsapp.com/send?phone=6285864151579&text=Assalamuallaikum%20Wr.%20Wb.%20Bapa%20H.%20Djadjang%20Sudradjat",
+        whatsappDev: "https://api.whatsapp.com/send?phone=6287734148075&text=Hallo%20Mr.%20Miftah%20Saifulloh"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-en][data-id]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+
+      document.title = translations[lang].title;
+      document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].description);
+
+      const primaryBtn = document.querySelector('.btn-primary');
+      if (primaryBtn) primaryBtn.href = translations[lang].whatsappMain;
+
+      const whatsappContact = document.querySelector('a[href*="6285864151579"]');
+      if (whatsappContact) whatsappContact.href = translations[lang].whatsappMain;
+
+      const devLink = document.querySelector('footer a[href*="6287734148075"]');
+      if (devLink) devLink.href = translations[lang].whatsappDev;
+
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage('en');
+    });
+  </script>
+</body>
+</html>
