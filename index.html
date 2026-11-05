@@ -428,6 +428,27 @@
       background-position: center;
     }
 
+    .flight-simulator-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(214,179,106,0.28), transparent 38%),
+        linear-gradient(135deg, #102b49, #07111f 70%);
+      color: #f0dfb3;
+      font-size: 92px;
+    }
+
+    .flight-simulator-image span {
+      filter: drop-shadow(0 12px 18px rgba(0,0,0,0.45));
+    }
+
+    .project-link {
+      margin-top: 18px;
+      font-size: 13px;
+      padding: 11px 18px;
+    }
+
     .project-content {
       padding: 22px;
     }
@@ -1190,6 +1211,30 @@
               >
                 Highlights overseas technical assignments, system upgrade support, training, and specialist workshop-based projects.
               </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image flight-simulator-image">
+              <span aria-hidden="true">✈</span>
+            </div>
+            <div class="project-content">
+              <span data-en="Project 04" data-id="Proyek 04">Project 04</span>
+              <h3 data-en="Flight Simulator Development" data-id="Membuat Flight Simulator">Flight Simulator Development</h3>
+              <p
+                data-en="An interactive flight simulator project featuring aircraft control and camera operation."
+                data-id="Proyek simulator penerbangan interaktif yang menampilkan kendali pesawat dan pengoperasian kamera."
+              >
+                An interactive flight simulator project featuring aircraft control and camera operation.
+              </p>
+              <a
+                class="btn btn-primary project-link"
+                href="https://h-djadjang-sudradjat-flightsimulator.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-en="Open Flight Simulator"
+                data-id="Buka Flight Simulator"
+              >Open Flight Simulator</a>
             </div>
           </article>
         </div>
